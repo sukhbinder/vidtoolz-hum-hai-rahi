@@ -1,18 +1,12 @@
 [project]
 name = "vidtoolz-hum-hai-rahi"
-version = "0.0.1"
+version = "0.0.2"
 description = "Tools for hum hai rahi channel"
 readme = "README.md"
-authors = [{name = "Sukhbinder Singh"}]
-license = {text = "Apache-2.0"}
-classifiers = [
-    "License :: OSI Approved :: Apache Software License"
-]
-dependencies = [
-    "vidtoolz",
-    "vidtoolz-apply-greenscreen",
-    "vidtoolz-add-sound",
-]
+authors = [{ name = "Sukhbinder Singh" }]
+license = { text = "Apache-2.0" }
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+dependencies = ["vidtoolz", "vidtoolz-apply-greenscreen", "vidtoolz-add-sound"]
 
 [project.urls]
 Homepage = "https://github.com/sukhbinder/vidtoolz-hum-hai-rahi"

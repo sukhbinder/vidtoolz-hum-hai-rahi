@@ -61,7 +61,7 @@ def create_parser(subparser):
         "-w", "--watching", action="store_true", help="Adds you are watching voice over"
     )
     parser.add_argument(
-        "-t",
+        "-st",
         "--start-time",
         type=float,
         default=1.0,
