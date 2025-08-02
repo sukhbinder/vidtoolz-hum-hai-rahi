@@ -26,8 +26,8 @@ type ``vid h2r --help`` to get help
 
 
 ```bash
-usage: vid h2r [-h] [-o OUTPUT] [-i] [-sv] [-s] [-c] [-a] [-l] [-w]
-               [-t START_TIME]
+usage: vid h2r [-h] [-o OUTPUT] [-i] [-sv] [-s] [-c] [-a] [-l] [-w] [-p]
+               [-stay] [-st START_TIME]
                input
 
 Tools for hum hai rahi channel
@@ -39,16 +39,20 @@ optional arguments:
   -h, --help            show this help message and exit
   -o OUTPUT, --output OUTPUT
                         Output file name
-  -i, --intro           Adds Hum Hai Rahi intro video greenscreen
+  -i, --intro           Adds Hum Hai Rahi intro video greenscreen (9s)
   -sv, --subscribe-voice
-                        Adds subscribe greenscreen with voice
-  -s, --subscribe       Adds subscribe greenscreen with no voice
-  -c, --consider        Adds consider subscribing voice over
-  -a, --apna-desh       Adds apna desh voice over
-  -l, --like            Adds like-comment voice over
-  -w, --watching        Adds you are watching voice over
-  -t START_TIME, --start-time START_TIME
+                        Adds subscribe greenscreen with voice (6s)
+  -s, --subscribe       Adds subscribe greenscreen with no voice (5s)
+  -c, --consider        Adds consider subscribing voice over (5s)
+  -a, --apna-desh       Adds apna desh voice over (13s)
+  -l, --like            Adds like-comment voice over (5s)
+  -w, --watching        Adds you are watching voice over (6s)
+  -p, --part-of-series  Adds you are Part of a series voice over (6s)
+  -stay, --stay-tuned   Adds you are Stay Tuned and thanks for watching voice
+                        (3s) over
+  -st START_TIME, --start-time START_TIME
                         Start time if given default=1
+
 
 ```
 
