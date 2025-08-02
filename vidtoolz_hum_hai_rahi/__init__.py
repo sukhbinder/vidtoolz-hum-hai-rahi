@@ -31,34 +31,50 @@ def create_parser(subparser):
         "-i",
         "--intro",
         action="store_true",
-        help="Adds Hum Hai Rahi intro video greenscreen",
+        help="Adds Hum Hai Rahi intro video greenscreen (9s)",
     )
     parser.add_argument(
         "-sv",
         "--subscribe-voice",
         action="store_true",
-        help="Adds subscribe greenscreen with voice",
+        help="Adds subscribe greenscreen with voice (6s)",
     )
     parser.add_argument(
         "-s",
         "--subscribe",
         action="store_true",
-        help="Adds subscribe greenscreen with no voice",
+        help="Adds subscribe greenscreen with no voice (5s)",
     )
     parser.add_argument(
         "-c",
         "--consider",
         action="store_true",
-        help="Adds consider subscribing voice over",
+        help="Adds consider subscribing voice over (5s)",
     )
     parser.add_argument(
-        "-a", "--apna-desh", action="store_true", help="Adds apna desh voice over"
+        "-a", "--apna-desh", action="store_true", help="Adds apna desh voice over (13s)"
     )
     parser.add_argument(
-        "-l", "--like", action="store_true", help="Adds like-comment voice over"
+        "-l", "--like", action="store_true", help="Adds like-comment voice over (5s)"
     )
     parser.add_argument(
-        "-w", "--watching", action="store_true", help="Adds you are watching voice over"
+        "-w",
+        "--watching",
+        action="store_true",
+        help="Adds you are watching voice over (6s)",
+    )
+    parser.add_argument(
+        "-p",
+        "--part-of-series",
+        action="store_true",
+        help="Adds you are Part of a series voice over (6s)",
+    )
+
+    parser.add_argument(
+        "-stay",
+        "--stay-tuned",
+        action="store_true",
+        help="Adds you are Stay Tuned and thanks for watching voice (3s) over",
     )
     parser.add_argument(
         "-st",
@@ -125,6 +141,16 @@ class ViztoolzPlugin:
 
         elif args.watching:
             audio = os.path.join(ASSETS, "youarewatchingHHR.mp3")
+            final_clip = snd.add_audio_to_video(args.input, audio, args.start_time)
+            snd.write_clip(final_clip, output)
+
+        elif args.part_of_series:
+            audio = os.path.join(ASSETS, "partofseries.mp3")
+            final_clip = snd.add_audio_to_video(args.input, audio, args.start_time)
+            snd.write_clip(final_clip, output)
+
+        elif args.stay_tuned:
+            audio = os.path.join(ASSETS, "StayTunedForMoreUpdates.mp3")
             final_clip = snd.add_audio_to_video(args.input, audio, args.start_time)
             snd.write_clip(final_clip, output)
 

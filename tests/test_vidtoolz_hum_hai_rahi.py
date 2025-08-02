@@ -20,6 +20,8 @@ def test_create_parser():
     assert result.apna_desh is False
     assert result.like is False
     assert result.watching is False
+    assert result.part_of_series is False
+    assert result.stay_tuned is False
 
 
 def test_plugin(capsys):

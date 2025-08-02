@@ -1,6 +1,6 @@
 [project]
 name = "vidtoolz-hum-hai-rahi"
-version = "0.0.2"
+version = "0.0.3"
 description = "Tools for hum hai rahi channel"
 readme = "README.md"
 authors = [{ name = "Sukhbinder Singh" }]
